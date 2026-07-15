@@ -43,7 +43,7 @@ Assuming you've got node and npm installed, you can run `nfdl` to download speci
 npx nfdl
 ```
 
-Specifically, I've selected `CascadiaMono` as my font and my neovide configuration selects this font as the main font.
+Specifically, I've selected `CaskaydiaMono Nerd Font Mono` as my font and my neovide configuration selects this font as the main font.
 
 ## To Do
 

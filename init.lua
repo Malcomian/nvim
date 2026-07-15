@@ -17,4 +17,23 @@ if vim.g.neovide then
   -- transparency
   vim.g.neovide_opacity = 0.95
   vim.g.neovide_normal_opacity = 0.95
+
+  -- Set a default initial scale factor
+  vim.g.neovide_scale_factor = 1.0
+
+  -- Create a helper function to modify the scale
+  local change_scale_factor = function(delta)
+    vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + delta
+  end
+
+  -- Map keys to zoom in, zoom out, and reset
+  vim.keymap.set("n", "<C-=>", function()
+    change_scale_factor(0.05)
+  end)
+  vim.keymap.set("n", "<C-->", function()
+    change_scale_factor(-0.05)
+  end)
+  vim.keymap.set("n", "<C-0>", function()
+    vim.g.neovide_scale_factor = 1.0
+  end)
 end

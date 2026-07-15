@@ -1,6 +1,9 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 
+-- home page
+vim.keymap.set("n", "<leader>h", Snacks.dashboard.open, { desc = "Open LazyVim Dashboard" })
+
 -- neovide config
 if vim.g.neovide then
   vim.o.guifont = "CaskaydiaMono Nerd Font Mono"

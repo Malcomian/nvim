@@ -14,4 +14,7 @@ if vim.g.neovide then
   vim.g.neovide_no_idle = true
   -- disable vsync
   vim.g.neovide_vsync = false
+  -- transparency
+  vim.g.neovide_opacity = 0.95
+  vim.g.neovide_normal_opacity = 0.95
 end

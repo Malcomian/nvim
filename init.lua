@@ -17,9 +17,7 @@ if vim.g.neovide then
   vim.g.neovide_no_idle = true
   -- disable vsync
   vim.g.neovide_vsync = false
-  -- transparency
-  vim.g.neovide_opacity = 0.95
-  vim.g.neovide_normal_opacity = 0.95
+  -- opacity is handled with a plugin that offers a dialog to change it: <leader>uo
 
   -- Set a default initial scale factor
   vim.g.neovide_scale_factor = 1.0

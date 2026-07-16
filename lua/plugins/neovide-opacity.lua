@@ -1,4 +1,11 @@
 -- lua/plugins/neovide-opacity.lua
+
+-- don't register anything when not running on neovide
+if not vim.g.neovide then
+  return {}
+end
+
+-- neovide opacity configuration
 return {
   "LazyVim/LazyVim",
   init = function()

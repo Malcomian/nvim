@@ -12,6 +12,7 @@ I've installed the following features with this setup:
 - Large files performance fixes. Large files don't work so good in most code editors. I added some basic large file fixes to my setup - it's mostly about disabling certain features when you encounter large files, and that includes certain animations and language server features.
 - [Neovide](https://neovide.dev/). I've got a handful of useful configuration options set for neovide in the main `/init.lua` file. This includes some settings for coloring the navbar based on the current color theme and some settings for handling large files better. If certain rendering options are enabled on large files, neovide will freeze when scrolling over long distances. Such options are vsync and some kind of idle rendering option that prevents Windows from sending an impossible queue of animation frame requests or something to that effect.
 - Opacity setting dialog. This is a persistent setting that saves to a simple text file in the nvim data folder. Open it with `<leader>uo`. The opacity will be set immediately after you submit a value because the window will be prompted to be redrawn.
+- Autocomplete auto-show toggle. `<leader>ux` will toggle the autocomplete menu behavior. When disabled, the autocomplete menu and ghost text will be disabled. This toggle persists between sessions.
 
 ## Installation
 

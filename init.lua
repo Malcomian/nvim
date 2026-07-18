@@ -30,11 +30,11 @@ if vim.g.neovide then
   -- Map keys to zoom in, zoom out, and reset
   vim.keymap.set("n", "<C-=>", function()
     change_scale_factor(0.05)
-  end)
+  end, { desc = "Neovide Zoom In +0.05" })
   vim.keymap.set("n", "<C-->", function()
     change_scale_factor(-0.05)
-  end)
+  end, { desc = "Neovide Zoom Out -0.05" })
   vim.keymap.set("n", "<C-0>", function()
     vim.g.neovide_scale_factor = 1.0
-  end)
+  end, { desc = "Neovide Zoom Reset" })
 end

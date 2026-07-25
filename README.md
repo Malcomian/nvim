@@ -14,6 +14,8 @@ I've installed the following features with this setup:
 - Opacity setting dialog. This is a persistent setting that saves to a simple text file in the nvim data folder. Open it with `<leader>uo`. The opacity will be set immediately after you submit a value because the window will be prompted to be redrawn.
 - Autocomplete auto-show toggle. `<leader>ux` will toggle the autocomplete menu behavior. When disabled, the autocomplete menu and ghost text will be disabled. This toggle persists between sessions.
 - [multicursor.nvim](https://github.com/jake-stewart/multicursor.nvim). This adds multicursor support in a fairly intuitive way. You get `<c-leftmouse>` support to add/remove cursors, and you also get some quick search multicursor features.
+- Removed warnings in markdown linter for lines that are longer than 80 characters.
+- Set prettier formatter's print-width setting to 10000.
 
 ## Installation
 
@@ -51,7 +53,5 @@ Specifically, I've selected `CaskaydiaMono Nerd Font Mono` as my font and my neo
 
 ## To Do
 
-- Configure some kind of code formatter for various file types. Prettier would be nice, but I haven't got it working yet.
 - Figure out the projects issue. For some reason, I have to install util.projects and Telescope from LazyExtras to get projects working. Normally, LazyVim is supposed to detect project folders and save them automatically to your projects list, but this feature is clearly broken by default. You can install the aforementioned extras to get projects working, but when you press p on the home screen, you'll try to open the wrong projects menu and you'll get an error. It's kind of insane that it's like this.
-- Configure autoformat somehow. It might be either Prettier or LazyFormat or conform.nvim or whatever. It's an annoying feature - I'll format if I feel like it! You don't format when I save! That means I didn't save what I'm actually looking at! I mean, normally this would be fine, but the autoformat for markdown is bad. For one, you don't really need a formatter for markdown. It's not built for that. I like using star and double star for italic and bold - I _despise_ using dunderscore in every circumstance. It looks bad because it's not at all relatable to the written word - and it's not like dunderscore would ever actually just underline something. ~~Strikethrough~~ actually makes sense with the double tilde thing, but it makes no sense that you would have dunderscore _not_ be for underlining text when you've got URLs that have underlined text. Markdown doesn't even have an underline text feature, which is totally crazy because markdown is supposed to be helpful for writing html, and html has multiple tags for underlined text.
 - Refactor some of these features so that the persistent features are more like "default setting" toggles. I'd just like certain features like autocomplete auto-show, diagnostics, inlay hints, and auto-format to be both toggle-able during runtime and I'd also like a persistent toggle for their default values.

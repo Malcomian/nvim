@@ -18,6 +18,7 @@ I've installed the following features with this setup:
 - Set prettier formatter's print-width setting to 10000.
 - Full color emoji font fallback so you can see the proper emojis for your operating system.
 - Disabled auto format and relative line numbers by default.
+- Disabled inlay hints by default.
 
 ## Installation
 

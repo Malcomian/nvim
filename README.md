@@ -17,6 +17,7 @@ I've installed the following features with this setup:
 - Removed warnings in markdown linter for lines that are longer than 80 characters.
 - Set prettier formatter's print-width setting to 10000.
 - Full color emoji font fallback so you can see the proper emojis for your operating system.
+- Disabled auto format and relative line numbers by default.
 
 ## Installation
 
@@ -55,5 +56,3 @@ Specifically, I've selected `CaskaydiaMono Nerd Font Mono` as my font and my neo
 ## To Do
 
 - Figure out the projects issue. For some reason, I have to install util.projects and Telescope from LazyExtras to get projects working. Normally, LazyVim is supposed to detect project folders and save them automatically to your projects list, but this feature is clearly broken by default. You can install the aforementioned extras to get projects working, but when you press p on the home screen, you'll try to open the wrong projects menu and you'll get an error. It's kind of insane that it's like this.
-- Refactor some of these features so that the persistent features are more like "default setting" toggles. I'd just like certain features like autocomplete auto-show, diagnostics, inlay hints, and auto-format to be both toggle-able during runtime and I'd also like a persistent toggle for their default values.
-- Especially create a persistent toggle for or at least disable on startup the auto format on save feature. It's easy enough to format on command with `<leader>cf`.

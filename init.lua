@@ -6,7 +6,17 @@ vim.keymap.set("n", "<leader>h", Snacks.dashboard.open, { desc = "Open LazyVim D
 
 -- neovide config
 if vim.g.neovide then
-  vim.o.guifont = "CaskaydiaMono Nerd Font Mono"
+  -- font with full color OS-specific emoji fallback
+  local emoji_font = ""
+  if vim.fn.has("win32") == 1 then
+    emoji_font = ", Segoe UI Emoji"
+  elseif vim.fn.has("linux") == 1 then
+    emoji_font = ", Noto Color Emoji"
+  elseif vim.fn.has("mac") == 1 then
+    emoji_font = ", Apple Color Emoji"
+  end
+  vim.o.guifont = "CaskaydiaMono Nerd Font Mono" .. emoji_font
+
   -- dynamic title bar color
   local normal_bg = string.format("#%06x", vim.api.nvim_get_hl(0, { name = "Normal" }).bg)
   vim.g.neovide_title_background_color = normal_bg

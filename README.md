@@ -16,6 +16,7 @@ I've installed the following features with this setup:
 - [multicursor.nvim](https://github.com/jake-stewart/multicursor.nvim). This adds multicursor support in a fairly intuitive way. You get `<c-leftmouse>` support to add/remove cursors, and you also get some quick search multicursor features.
 - Removed warnings in markdown linter for lines that are longer than 80 characters.
 - Set prettier formatter's print-width setting to 10000.
+- Full color emoji font fallback so you can see the proper emojis for your operating system.
 
 ## Installation
 

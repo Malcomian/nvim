@@ -52,7 +52,59 @@ Assuming you've got node and npm installed, you can run `nfdl` to download speci
 npx nfdl
 ```
 
-Specifically, I've selected `CaskaydiaMono Nerd Font` as my font and my neovide configuration selects this font as the main font.
+Unfortunately, `nfdl` seems to be kind of bugged, but it also doesn't really contain all the versions of every font you might want. The main difference being that there's mono spaced version of most of these nerd fonts which prevents icons from taking up two spaces. The default is to be weird, and I don't really appreciate that. The only solution is to use another method, and this case, it's `scoop` on windows.
+
+Install `scoop` on windows:
+
+```bash
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+```
+
+```bash
+scoop bucket add nerd-fonts
+```
+
+```bash
+scoop install nerd-fonts/CodeNewRoman-NF-Mono
+```
+
+Specifically, I've selected `CodeNewRoman Nerd Font Mono` as my font and my neovide configuration selects this font as the main font.
+
+On Linux, this installation is quite different.
+
+```bash
+# Create fonts directory (if it doesn't exist)
+mkdir -p ~/.local/share/fonts
+
+# Download the latest CodeNewRoman Nerd Font
+cd /tmp
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/CodeNewRoman.zip
+
+# Unzip it
+unzip CodeNewRoman.zip -d CodeNewRoman
+
+# Install the fonts (including the Mono variants)
+cp CodeNewRoman/*.otf ~/.local/share/fonts/
+
+# Refresh the font cache
+fc-cache -fv
+
+# Clean up
+rm -rf /tmp/CodeNewRoman /tmp/CodeNewRoman.zip
+```
+
+Evidently, you can also download the official install script like this:
+
+```bash
+# Clone only what you need (sparse checkout)
+git clone --filter=blob:none --sparse https://github.com/ryanoasis/nerd-fonts.git
+cd nerd-fonts
+git sparse-checkout add patched-fonts/CodeNewRoman
+
+# Install just CodeNewRoman
+./install.sh CodeNewRoman
+```
 
 ## To Do
 

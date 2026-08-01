@@ -15,7 +15,7 @@ if vim.g.neovide then
   elseif vim.fn.has("mac") == 1 then
     emoji_font = ", Apple Color Emoji"
   end
-  vim.o.guifont = "FiraCode Nerd Font Mono" .. emoji_font
+  vim.o.guifont = "CaskaydiaMono Nerd Font" .. emoji_font
 
   -- dynamic title bar color
   local normal_bg = string.format("#%06x", vim.api.nvim_get_hl(0, { name = "Normal" }).bg)

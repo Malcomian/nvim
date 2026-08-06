@@ -22,7 +22,7 @@ if vim.g.neovide then
   vim.g.neovide_title_background_color = normal_bg
   vim.g.neovide_title_text_color = "#ffffff"
   -- far scroll animation fix
-  vim.g.neovide_scroll_animation_far_lines = 0.1
+  vim.g.neovide_scroll_animation_far_lines = 1
   -- force continuous rendering
   vim.g.neovide_no_idle = true
   -- disable vsync
